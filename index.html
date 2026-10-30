@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ananya — Amplifier Fund</title>
+    <meta
+      name="description"
+      content="Ananya is saving for a Fender Mustang LT-25 guitar amp. Contribute straight to her UPI."
+    />
+    <meta name="theme-color" content="#f3efe6" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="brand">Ananya</p>
+        <a href="#pay">Contribute</a>
+      </header>
+
+      <div class="layout">
+        <article>
+          <p class="kicker">Amplifier fund</p>
+          <h1>Help me buy<br />an <em>amp.</em></h1>
+          <p class="lead">
+            I’m Ananya. I play guitar, and I’m saving for a practice amp so I can
+            work on songs at home. If you’d like to chip in, it goes straight to
+            me — this page never holds the money.
+          </p>
+
+          <figure>
+            <div class="frame">
+              <img src="amp.jpg" alt="Black Fender Mustang LT-25 digital guitar amplifier" />
+            </div>
+            <figcaption>
+              <span>Fender Mustang LT-25 · digital · 25 watt</span>
+              <span class="strong">₹24,214 listed</span>
+            </figcaption>
+          </figure>
+
+          <dl>
+            <div>
+              <dt>Style</dt>
+              <dd>LT</dd>
+            </div>
+            <div>
+              <dt>Size</dt>
+              <dd>25 watt</dd>
+            </div>
+            <div>
+              <dt>Goal</dt>
+              <dd class="goal">₹24,214</dd>
+            </div>
+          </dl>
+
+          <p class="note">
+            It’s a small digital Fender — loud enough for a room, quiet enough
+            for neighbours, and the amp I actually want to practice on. Any
+            amount helps. Thank you.
+          </p>
+          <p class="sign">— Ananya</p>
+        </article>
+
+        <aside id="pay">
+          <div class="card">
+            <p class="kicker">Pay Ananya</p>
+            <h2>Scan, or open UPI.</h2>
+            <p class="card-copy">
+              Same code as her payment QR. Any UPI app can pay
+              <span class="id">ananyapreet@fam</span>.
+            </p>
+            <img class="qr" src="pay-qr.jpg" alt="UPI QR code that pays ananyapreet@fam" />
+
+            <div class="upi-row">
+              <div>
+                <p class="label">UPI ID</p>
+                <p class="id-line">ananyapreet@fam</p>
+              </div>
+              <button type="button" id="copy" aria-label="Copy UPI ID">Copy</button>
+            </div>
+
+            <fieldset>
+              <legend>Amount, if you want to set one</legend>
+              <div class="chips" id="chips">
+                <button type="button" data-amount="200">₹200</button>
+                <button type="button" data-amount="500">₹500</button>
+                <button type="button" data-amount="1000">₹1,000</button>
+                <button type="button" data-amount="2500">₹2,500</button>
+                <button type="button" data-amount="other">Other</button>
+              </div>
+              <label id="custom-wrap" hidden>
+                <span class="sr">Custom amount in rupees</span>
+                <input id="custom" inputmode="numeric" placeholder="Amount in rupees" maxlength="6" />
+              </label>
+              <button type="button" id="clear" class="text-btn">
+                Leave the amount blank — I’ll type it in the app
+              </button>
+            </fieldset>
+
+            <p id="alert" class="alert" hidden role="alert">Try ₹1,00,000 or less in one payment.</p>
+            <a id="pay-link" class="pay" href="upi://pay?pa=ananyapreet@fam&pn=Ananya&cu=INR&tn=Amplifier%20for%20Ananya">
+              Open UPI payment
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <p id="hint" aria-live="polite">
+              On a phone this opens your UPI app with Ananya filled in. On a computer, scan the QR.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <footer>Payments go directly to ananyapreet@fam. Nothing is stored on this page.</footer>
+    </main>
+    <script src="pay.js"></script>
+  </body>
+</html>
