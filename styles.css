@@ -225,6 +225,23 @@ footer {
   color: var(--muted);
   font-size: 0.875rem;
 }
+.credits {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+.credits p { margin: 0; }
+.credits p + p { margin-top: 0.5rem; }
+.credits a {
+  color: var(--amber);
+  font-weight: 600;
+  text-decoration: none;
+}
+.credits a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 @media (min-width: 40rem) {
   main { padding: 2.5rem 2rem; }
